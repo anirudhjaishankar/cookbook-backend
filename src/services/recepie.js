@@ -1,5 +1,9 @@
 import Recepie from "../models/recepie.js";
 
+export async function getAllRecepies() {
+	return await Recepie.find();
+}
+
 export async function getRecepieById(id) {
 	return await Recepie.find({ _id: id });
 }
